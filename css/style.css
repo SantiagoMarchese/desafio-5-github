@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2? family=Anton&family=Arvo&family=BIZ+UDMincho&family=Hurricane&family=Lavishly+Yours&display=swap');
+/*el estarisco sirve para modificar todo*/
+*{
+    margin: 1;
+    padding: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.color-fondo{ 
+    background: burlywood; /*para ponerle color al fondo*/
+}
+
+
+.foto-fondo {
+    background-image: url(../img/paisaje2.jpg);
+    background-position: no-repeat;
+    background-size: cover;
+}
+
+/*agregamos grid a la planilla de contacto*/
+.formulario{
+    border: 2px solid black;
+    text-align: center;
+    background-color: rgb(78, 183, 218);
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 768px){
+    .formulario{
+        border: 2px solid black;
+        display: grid;
+        grid-template-columns: repeat(auto, auto);
+        grid-template-rows: repeat(auto, auto);
+        gap: 1px 1px;
+        grid-template-areas:
+        "formulario";
+    }
+}
+
+@media screen and (max-width: 320px){
+    .formulario{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto, auto);
+    grid-template-rows: repeat(auto, auto);
+    gap: 1px 1px;
+    grid-template-areas:
+    "formulario";
+    }
+}
+
+
+/*agregamos un poco de box modeling y flexbox*/
+
+.direcc { 
+    margin-top: 2%;
+}
+
+
+nav {
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+nav a{
+    text-decoration: none;
+    position: initial;
+    color: black;
+    font-size: large;
+    background-color: rgb(212, 194, 122);
+    padding: 7px 7px 7px 7px;
+    margin: 7px 7px 7px 7px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(73, 17, 240);
+    font-family: 'Anton', sans-serif;
+}
+
+.titulo-color-galeria {
+    color: black;
+}
+
+h3{
+    text-align: center;
+    color: black;
+    font-family: 'Anton', sans-serif;
+
+}
+
+
+.footer-redes{ 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(46, 8, 118, 0.953);
+}
+
+.pie-redes{
+    display: flex;
+    color: black;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-redess a {
+    display: flex;
+    justify-content: space-evenly;
+    color: rgba(46, 8, 118, 0.953);
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.foto {
+    text-align: center;
+    margin-top: 3%;
+    width: auto;
+}
+.video {
+    margin-top: 3%;
+    text-align: center;
+}
+    
+.nota-local {
+    margin-top: 2%;
+} 
+    
+    
+.caja-contenedora {
+    margin-top: 20px;
+    border: 5px solid rgba(3, 75, 9, 0.953) ;/*buscar color en la pagina que pasaron0*/ 
+    border-style: double;
+    color: rgb(0, 0, 0);
+    font-family: 'Anton', sans-serif;
+}
+.caja-hija  {
+    width: 100%;
+    height: 1150px
+}
+
+iframe { 
+    margin-top: 20px;
+}
+
+.mapa { 
+    text-align: center;
+}
+
+.texto-texto {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    margin-top: 1px;
+    border: 0px solid black;
+    border-style: dashed;
+    
+}
+
+.texto-contacto {
+    margin-top: 1px;
+    border: 7px solid rgb(194, 115, 117);
+    border-style: dashed;
+    font-family: 'Anton', sans-serif;
+}
+
+/*agregamos flexbos*/
+.uno {
+    background-color: white; 
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    margin: 5px;
+} 
+
+.dos { 
+    background-color: white; 
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    margin: 5px;
+}  
+    
+.tres { 
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    margin: 5px;
+}  
+    
+.cuatro { 
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    margin: 5px;
+}  
+
+/*aplicamos grid*/
+.grid-container{
+    border: 2px solid black;
+    display: grid;
+    /*establecemos cuantas columnas y qeu anchos tendran respecto a los padres*/
+    grid-template-columns: repeat(4, 24,9%);
+    /*establecemos cantidad de filas y que alto tendran al padre, es el piso*/
+    grid-template-rows: repeat(3, autopx);
+    /*establecemos el espaciado entre cajas*/
+    gap: 1px 1px;
+    
+    grid-template-areas: 
+    "noticia-1 noticia-2 noticia-3 noticia-4"
+    "noticia-1 noticia-2 noticia-3 noticia-4"
+    "noticia-1 noticia-2 noticia-3 noticia-4";
+    }
+
+/*activamos las areas a acomodora*/
+.noticia-1{
+    grid-area: noticia-1;
+    background-color: brown;
+}
+.noticia-2{
+    grid-area: noticia-2;
+    background-color: blue;
+    
+}
+.noticia-3{
+    grid-area: noticia-3;
+    background-color: chartreuse;
+}
+.noticia-4{
+    grid-area: noticia-4;
+    background-color: darkmagenta;
+}
+
+
+/*para modificar la vista a celu, tablet,etc*/
+@media screen and (max-width: 768px){ 
+    .grid-container{
+        border: px solid black;
+        display: grid;
+        /*establecemos cuantas columnas y qeu anchos tendran respecto a los padres*/
+        grid-template-columns: repeat(2, 49,9%);
+        /*establecemos cantidad de filas y que alto tendran al padre, es el piso*/
+        grid-template-rows: repeat(4, autopx);
+        /*establecemos el espaciado entre cajas*/
+        gap: 1px 1px;
+        
+        grid-template-areas: 
+        "noticia-1 noticia-2"
+        "noticia-1 noticia-2"
+        "noticia-3 noticia-4"
+        "noticia-3 noticia-4"
+        ;
+    }
+}
+/*activamos las areas a acomodora*/
+.noticia-1{
+    grid-area: noticia-1;
+    background-color: rgb(48, 165, 42);
+}
+.noticia-2{
+    grid-area: noticia-2;
+    background-color: rgb(227, 17, 17);
+}
+.noticia-3{
+    grid-area: noticia-3;
+    background-color: rgb(209, 55, 201);
+}
+.noticia-4{
+    grid-area: noticia-4;
+    background-color: rgb(42, 211, 223);
+}
+
+
+/*para modificar la vista a celu, tablet,etc*/
+@media screen and (max-width: 320px){ 
+    .grid-container{
+        display: grid;
+        /*establecemos cuantas columnas y qeu anchos tendran respecto a los padres*/
+        grid-template-columns: repeat(2, 49,9%);
+        /*establecemos cantidad de filas y que alto tendran al padre, es el piso*/
+        grid-template-rows: repeat(6, autopx);
+        /*establecemos el espaciado entre cajas*/
+        gap: 1px 1px;
+        
+        grid-template-areas: 
+        "noticia-1 noticia-2"
+        "noticia-1 noticia-2"
+        "noticia-1 noticia-2"
+        "noticia-3 noticia-4"
+        "noticia-3 noticia-4"
+        "noticia-3 noticia-4"
+        ;
+    }
+}
+
+/*activamos las areas a acomodora*/
+.noticia-1{
+    grid-area: noticia-1;
+    background-color: rgb(48, 165, 42);
+}
+.noticia-2{
+    grid-area: noticia-2;
+    background-color: rgb(227, 17, 17);
+}
+.noticia-3{
+    grid-area: noticia-3;
+    background-color: rgb(209, 55, 201);
+}
+.noticia-4{
+    grid-area: noticia-4;
+    background-color: rgb(42, 211, 223);
+}
+
+/*grid para noticia-5*/
+.noticia-5{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(1, 99%);
+    grid-template-rows: repeat(4, autopx);
+    gap: 1px 1px;
+    grid-template-areas:
+    "noticia-5 noticia-5 noticia-5 noticia-5"
+}
+/*activamos las areas*/
+.noticia-5{
+    border: 2px solid black;
+    background-color: blueviolet;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px){
+    .noticia-5{
+        border: solid black;
+        display: grid;
+        
+        grid-template-columns: repeat(1, 99%);
+        grid-template-rows: repeat(4, autopx);
+        gap: 1px 1px;
+        grid-template-areas: 
+        "noticia-5 noticia-5 noticia-5 noticia-5"
+    }
+}
+/*activamos las areas*/
+.noticia-5{
+    border: 2px solid black;
+    background-color: blueviolet;
+    justify-content: space-between;
+    
+}
+
+@media screen and (max-width: 320px){
+    .noticia-5{
+        border: solid black;
+        display: grid;
+        grid-template-columns: repeat(1, 99%);
+        grid-template-rows: repeat(4, autopx);
+        gap: 1px 1px;
+        grid-template-areas: 
+        "noticia-5 noticia-5 noticia-5 noticia-5";
+    }
+}
+/*activamos las areas*/
+.noticia-5{
+    border: 2px solid black;
+    background-color: blueviolet;
+    justify-content: space-between;
+}
+
+
+/*media queries para viedo, foto, mapa, titulo*/
+
+@media screen and (max-width: 320px){
+    .mapa{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .mapa{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .foto{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .foto{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .video{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    video{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .centrando-titulo{
+        display: grid;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .centrando-titulo{
+        flex-direction: column;
+        display: grid;
+        justify-items: center;
+        
+    }
+}
