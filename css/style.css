@@ -37,6 +37,36 @@
     }
 }
 
+
+.a-1-hover:hover{
+    color: cyan;
+    font-size:x-large
+}
+
+.a-2-hover:hover{
+    color: cyan;
+    font-size:x-large
+}
+
+.a-3-hover:hover{
+    color: cyan;
+    font-size:x-large
+}
+
+.a-4-hover:hover{
+    color: cyan;
+    font-size:x-large
+}
+
+.a-5-hover:hover{
+    color: cyan;
+    font-size:x-large
+}
+
+
+
+
+
 @media screen and (max-width: 320px){
     .formulario{
     border: 2px solid black;
